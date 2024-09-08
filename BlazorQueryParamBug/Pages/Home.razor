@@ -1,0 +1,17 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<MainComp></MainComp>
+
+<button @onclick="Callback">Trigger the exception!</button>
+
+@code {
+    private void Callback()
+    {
+        Navigation.NavigateTo(Navigation.GetUriWithQueryParameter("numTwo", 2));
+    }
+}
