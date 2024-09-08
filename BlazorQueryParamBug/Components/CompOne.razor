@@ -4,13 +4,4 @@
 @code {
     [SupplyParameterFromQuery] private int? numOne { get; set; }
 
-    protected override void OnAfterRender(bool firstRender)
-    {
-        if (numOne == null)
-        {
-            Navigation.NavigateTo(Navigation.GetUriWithQueryParameter("numOne", 1));
-        }
-        base.OnAfterRender(firstRender);
-    }
-
 }
